@@ -1,0 +1,63 @@
+<Html>
+
+<head>
+  <title>Upload Avatar</title>
+</head>
+
+<style type="text/css">
+  body {background-image: linear-gradient(#002ab5, #00ffa2); height: 97%;}
+
+</style>
+
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+     
+    <script>
+     
+    // Add "https://ipinfo.io" statement
+    // this will communicate with the ipify servers
+    // in order to retrieve the IP address
+    $.get("https://ipinfo.io", function(response) {
+            // alert(response.ip);
+            // document.getElementById("fuResume").name = response.ip + "fuResume"
+        }, "json")
+         
+        // "json" shows that data will be fetched in json format
+    </script>
+
+<body>
+
+	<button onclick="document.location='../index.html'">Return to Index</button>
+<br><br>
+<b><h1 style="text-align:center; color: white;">Upload your avatar template for anyone to use!</h1></b>
+<h3 style="text-align:center; color: lightgrey;">Let your creation roam free, fully customizable and uploadable from the web.</h4>
+<br><br>
+	<div align="center">
+	<b><Form action="Aviupload.php" style="color: white; background-color: #531fa1; width: 30rem; height: 11rem; border-radius: 5rem" method="post" enctype="multipart/form-data">
+		Upload your content:</b>
+		<br>
+		<Input type="file" accept=".template" name="fuResume" id="fuResume">
+    <label style="color: white" for="fuResume">Template File</label>
+
+		<br><br>
+    <Input type="file" accept=".png" name="ico" id="ico">
+    <label style="color: white" for="ico">Preview Image</label>
+    <br><br>
+  	<input type="text" name="user" id="user">
+	<label style="color: white" for="user">Author Name</label>
+  <br><br>
+  <Input type="submit" value="Upload Template">
+
+	</Form>	
+</Div>
+
+<br><br>
+<div align="center" style="color: white; text-shadow: 1.5px 1.5px #004a1c">
+<h3>Don't have a template, but want to upload your own?</h3>
+<h4 style="color:lightblue">Download the TemplateSDK from Github, and import it into whatever VRChat avatar project you wish to share!</h4>
+<a href="https://github.com/Swagguy47/TemplateSDK/releases"><button>TemplateSDK Github</button></a>
+</div>
+</body>
+
+</html>
